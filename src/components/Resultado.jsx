@@ -1,4 +1,5 @@
-import styled from '@emotion/styled'
+import { Result, Imagen, Precio, Texto } from '../styled/resultado';
+
 export const Resultado = ({cotizacion}) => {
     const {PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASTUPDATE} = cotizacion;
     const url = `https://cryptocompare.com/${IMAGEURL}`;
@@ -15,31 +16,3 @@ export const Resultado = ({cotizacion}) => {
         </Result>
     )
 }
-
-const Result = styled.div`
-    color: #FFF;
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 30px;
-`;
-
-const Imagen = styled.img`
-    display: block;
-    width: 120px;
-`;
-
-const Precio = styled.p`
-    font-size: 25px;
-    span{
-        font-weight: 700;
-    }
-`;
-
-const Texto = styled.p`
-    font-size: 15px;
-    span{
-        font-weight: 700;
-    }
-`;
